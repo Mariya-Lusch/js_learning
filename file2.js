@@ -1,22 +1,19 @@
-// Тернарный оператор
+// Функции, параметры, атрибуты
 
-// const age = prompt("Let write your age");
+"use strict";
 
-const age = 27;
+// function Declaration
+function calc(a, b, c) {
+  return a + b - c;
+}
 
-age >= 18
-  ? console.log("Я уже взрослый")
-  : console.log("Родители говорят, я еще маленький");
+const result = calc(20, 40, 7);
+console.log(result);
 
-const drink = age >= 18 ? "wine" : "juce";
-console.log(drink);
 
-// let drink2;
-// if (age >= 18) {
-//   drink2 = "wine";
-// } else {
-//   drink2 = "juce";
-// }
-// console.log(drink2);
+// function Expression
+let result2 = function (d, c, m) {
+  return d + c * m;
+};
 
-console.log(`Я люблю пить ${age >= 18 ? "wine" : "juce"}`);
+console.log(result2(20, 6, 2));
