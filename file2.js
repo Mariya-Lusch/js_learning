@@ -1,19 +1,32 @@
-// Функции, параметры, атрибуты
+// Функции колбэка
 
 "use strict";
 
-// function Declaration
-function calc(a, b, c) {
-  return a + b - c;
+//function decloration
+
+function ask(question, yes, no) {
+  if (confirm(question)) {
+    yes();
+  } else no();
 }
 
-const result = calc(20, 40, 7);
-console.log(result);
+function showOk() {
+  alert("Спасибо за согласие");
+}
 
+function showCansel() {
+  alert("Вы отказались");
+}
 
-// function Expression
-let result2 = function (d, c, m) {
-  return d + c * m;
-};
+// ask("Вы согласны?", showOk, showCansel);
 
-console.log(result2(20, 6, 2));
+//function expresion
+ask(
+  "Вы согласны?",
+  function () {
+    alert("Спасибо за согласие");
+  },
+  function () {
+    alert("Вы отказались");
+  }
+); // у функции убираем название, т.к. в данном случае оно нам не нужно, обращаться к нему мы не будем
