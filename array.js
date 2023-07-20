@@ -35,3 +35,5 @@ console.log(userArr);
 console.log(userArrTwo[userArrTwo.length - 1]);
 // но эту запись можно скоратить, используя метод массива at
 console.log(userArrTwo.at(-1));
+
+
