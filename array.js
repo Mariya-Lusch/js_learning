@@ -1,4 +1,4 @@
-// МАССИВЫ
+// МАССИВЫ лекция
 
 const userArr = ["Mary", 28];
 console.log(userArr);
