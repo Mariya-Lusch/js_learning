@@ -1,43 +1,32 @@
-// МАССИВЫ лекция. ЦИКЛ FOR ...
+// МАССИВЫ лекция. ЦИКЛ while & do wile
 
-const arr = [
-  "Mariya",
-  "Luschik",
-  2023 - 1995,
-  "Pushkino",
-  true,
-  ["mother", "father", "brother", "husb"],
-];
+// конструкция цикла while
+let i = 1;
 
-// console.log(arr);
-
-// вывести каждый элемент массива по отдельности
-for (let i = 0; i < arr.length; i++) {
-  console.log(arr[i]);
+while (i <= 10) {
+  console.log(`Строка выводится в консоль ${i} раз`);
+  i++;
 }
 
-// вывести тип данных
-for (let i = 0; i < arr.length; i++) {
-  console.log(typeof arr[i]);
-}
+// конструкция цикла do while (сделай что-то, а затем проверь условие. выполняется хотя бы 1 раз)
+let m = 1;
 
-// поместить конвертиврованные данные в другой массив
-const arr2 = [];
+do {
+  console.log(`Строка выводится в консоль ${m} раз`);
+  m++;
+} while (m <= 10);
 
-for (let i = 0; i < arr.length; i++) {
-  console.log(typeof arr[i]);
-  arr2.push(typeof arr[i]);
-}
-console.log(arr2);
+// Объявление рандомного числа
 
-// выборка опреденного типа данных из массива - пропуск итерации с помощью continue
-for (let i = 0; i < arr.length; i++) {
-  if (typeof arr[i] !== "string") continue;
-  console.log(arr[i]);
-}
+let someNumber = Math.floor(Math.random() * 10) + 1;
+// умножаем на 10, т.к. рандомное число будет от 0 до 1, не целое, и округляем в меньшую сторону
+// но чтобы цикл не работал бесконечно (т.к. условие верно), добавляем 1 в условие переменной, чтобы когда-то вместо 10 сгенерировалось 11
+console.log(someNumber);
 
-// прекращение выполнения цикла с помощью break
-for (let i = 0; i < arr.length; i++) {
-  if (typeof arr[i] === "number") break;
-  console.log(arr[i]);
+while (someNumber !== 10) {
+  console.log(`Вам выпало число ${someNumber}`);
+  someNumber = Math.floor(Math.random() * 10) + 1; // вывод нового числа, т.к. новый круг итерации
+  if ((someNumber = 10)) {
+    console.log("Вы победили, Вам выпало число 10!");
+  }
 }
